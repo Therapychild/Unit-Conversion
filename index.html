@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="card">
+      <div id="card-header">
+        <h2>Metric/Imperial Unit Conversion</h2>
+        <input id="input-amount" class="input-amount" value="0" type="number" maxlength="2"/>
+        <h3 id="error" hidden>Please enter a number between 0 and 999</h3>
+        <form>
+          <h3>Select conversion type</h3>
+          <div id="radio-container">
+            <div class="radio">
+              <input type="radio" id="metric" name="convert-direction" checked/>
+              <label for="metric">Metric/Imperial</label>
+            </div>
+            <div lass="radio">
+              <input type="radio" id="imperial" name="convert-direction"/>
+              <label for="imperial">Imperial/Metric</label>
+            </div>
+          </div>
+        </form>
+        <div id="button-container">
+          <button onclick="convert()">Convert</button>
+          <button onclick="reset(false)">Reset</button>
+        </div>
+      </div>
+      <div id="card-body">
+        <div class="conversion-container">
+          <h4 id="length-title">Length (Meters => Feet)</h4>
+          <span id="length">0 | 0</span>
+        </div>
+        <div class="conversion-container">
+          <h4 id="volume-title">Volume (Liters => Gallons)</h4>
+          <span id="volume">0 | 0</span>
+        </div>
+        <div class="conversion-container">
+          <h4 id="weight-title">Weight (Kilograms => Pounds)</h4>
+          <span id="weight">0 | 0</span>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
